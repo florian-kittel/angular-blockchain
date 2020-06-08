@@ -7,7 +7,7 @@
     <li class="list-group-item text-white bg-dark">
       <span>Hash</span>
       <br>
-      <div class="text-truncate" [style.color]="'#' + block.hash.substring(0,6)">
+      <div class="text-truncate" [style.color]="'#' + getColorCode(block.hash)">
         <small>{{block.hash}}</small>
       </div>
       <br>
@@ -16,7 +16,7 @@
       <br>
 
       <div *ngIf="block.previousHash; else noPreviousHash" class="text-truncate"
-        [style.color]="'#' + block.previousHash.substring(0,6)">
+        [style.color]="'#' + getColorCode(block.previousHash)">
         <small>{{block.previousHash}}</small>
       </div>
       <ng-template #noPreviousHash><small class="text-muted">none</small></ng-template>

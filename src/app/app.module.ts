@@ -2,19 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
-import { BlockchainViewerComponent } from './pages/blockchain-viewer/blockchain-viewer.component';
-import { BlockViewComponent } from './shared/block-view/block-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlockchainViewerComponent,
-    BlockViewComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

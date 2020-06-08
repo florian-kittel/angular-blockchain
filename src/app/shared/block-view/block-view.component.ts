@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Block } from './block.interface';
 
 @Component({
   selector: 'app-block-view',
@@ -7,11 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BlockViewComponent implements OnInit {
 
-  @Input() public block;
+  @Input() public block: Block;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getColorCode(hash) {
+    if (!hash) {
+      return '000000';
+    }
+
+    return String(hash).substring(0, 6);
   }
 
 }

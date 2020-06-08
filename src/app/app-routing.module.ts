@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlockchainViewerComponent } from './pages/blockchain-viewer/blockchain-viewer.component';
-
 
 const routes: Routes = [
   {
-    path: '',
-    component: BlockchainViewerComponent
-  }
+    path: 'overview',
+    loadChildren: () => import('./pages/blockchain-viewer/blockchain-viewer.module').then(m => m.BlockchainViewerModule),
+  },
+  { path: '**', redirectTo: '/overview', pathMatch: 'full' }
+
 ];
 
 @NgModule({

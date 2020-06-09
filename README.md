@@ -1,6 +1,6 @@
 # AngularBlockchain
 
-This project is a basic frontend application that uses the node-blockchain example. It will directly run in the browser. You can try it out at: https://florian-kittel.github.io/angular-blockchain/overview
+This project is a basic frontend application that uses the node-blockchain example. It will directly run in the browser. You can try it out at: https://florian-kittel.github.io/angular-blockchain/
 
 ## Development server
 

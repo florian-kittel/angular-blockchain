@@ -1,6 +1,9 @@
-<div class="card text-white bg-dark">
+<div class="card text-white bg-dark" [class.border-primary]="isSelectedBlock" [ngClass]="shadowType"
+  (mouseover)="shadowType = 'shadow'" (mouseout)="shadowType = 'shadow-sm'">
   <div class="card-body">
-    <h5 class="card-title">Block <small class="text-muted" *ngIf="!block.previousHash">(Genesis block)</small></h5>
+    <h5 class="card-title mb-0">Block #{{index}} <small class="text-muted" *ngIf="!block.previousHash">(Genesis
+        block)</small></h5>
+    <small class="text-muted">{{block.timestamp * 1000| date:'yyyy-MM-dd hh:mm'}}</small>
   </div>
 
   <ul class="list-group list-group-flush">
@@ -23,17 +26,20 @@
     </li>
 
     <li class="list-group-item text-white bg-dark">
-      <span>Nonce</span>
-      <div class="text-truncate text-muted">
-        <small>{{block.nonce}}</small>
+      <div class="row">
+        <div class="col"><span>Nonce</span>
+          <div class="text-truncate text-muted">
+            <small>{{block.nonce}}</small>
+          </div>
+        </div>
+        <div class="col"> <span>Transactions</span>
+          <div class="text-truncate text-muted">
+            <small class="text-muted">{{block.transactions.length}}</small>
+          </div>
+        </div>
+
       </div>
     </li>
 
-    <li class="list-group-item text-white bg-dark">
-      <span>Timestamp</span>
-      <div class="text-truncate text-muted">
-        <small>{{block.timestamp}}</small>
-      </div>
-    </li>
   </ul>
 </div>

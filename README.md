@@ -1,6 +1,6 @@
 # AngularBlockchain
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+This project is a basic frontend application that uses the node-blockchain example. It will directly run in the browser. You can try it out at: https://florian-kittel.github.io/angular-blockchain/overview
 
 ## Development server
 

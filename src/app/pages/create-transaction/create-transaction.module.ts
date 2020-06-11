@@ -3,22 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/shared.module';
 
-import { BlockchainViewerComponent } from './blockchain-viewer.component';
+import { CreateTransactionComponent } from './create-transaction.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BlockchainViewerComponent
+    component: CreateTransactionComponent
   }
 ];
 
 @NgModule({
   declarations: [
-    BlockchainViewerComponent
+    CreateTransactionComponent
   ],
   imports: [
     SharedModule,
     RouterModule.forChild(routes),
   ]
 })
-export class BlockchainViewerModule { }
+export class CreateTransactionModule { }

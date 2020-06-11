@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Blockchain } from 'node-blockchain/src/blockchain';
-import EC from 'elliptic';
+import * as elliptic from 'elliptic';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class BlockchainService {
   }
 
   private generateWalletKeys() {
-    const ec = new EC.ec('secp256k1');
+    const ec = new elliptic.ec('secp256k1');
     const key = ec.genKeyPair();
 
     this.walletKeys.push({

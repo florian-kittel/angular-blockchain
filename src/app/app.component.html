@@ -1,4 +1,13 @@
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/">MyCoin</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="d-flex w-100 h-100 mx-auto flex-column">
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand mr-auto" routerLink="/">MyCoin</a>
+    <div>
+      <!-- Balance: {{balance}} -->
+    </div>
+    <button class="btn btn-outline-light my-2 my-sm-0" type="button" routerLink="transaction">Create</button>
+  </nav>
+  <main class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <router-outlet></router-outlet>
+  </main>
+</div>

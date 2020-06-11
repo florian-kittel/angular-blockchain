@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+$secondary: #f8f9fa;
+
 @import "~bootstrap/scss/bootstrap";
 
+html,
 body {
   background-color: #21252b;
   color: #f8f9fa;
+  height: 100%;
 }

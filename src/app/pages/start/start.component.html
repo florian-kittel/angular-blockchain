@@ -1,0 +1,20 @@
+<div class="d-flex w-100 h-100 mx-auto flex-column">
+  <div class="mb-auto"></div>
+  <div class="ml-auto mr-auto text-center" style="max-width: 48em;">
+    <h1>MyCoin Demo</h1>
+    <p class="lead">A blockchain that is running direct inside your browser.</p>
+    <p class="lead">To start you will need to create a personal wallet. All information and transactions are stored
+      locally in your local storage.</p>
+    <p class="lead" *ngIf="!keys.address">
+      <button class="btn btn-lg btn-secondary" (click)="geneateNewWallet()">Generate you wallet</button>
+    </p>
+    <p class="lead" *ngIf="keys.address">
+      <strong>You Wallet Address</strong><br>
+      <small class="text-muted">{{keys.address}}</small><br>
+    </p>
+    <p class="lead" *ngIf="keys.address">
+      <button class="btn btn-lg btn-secondary" routerLink="/overview">Start</button>
+    </p>
+  </div>
+  <div class="mt-auto"></div>
+</div>

@@ -17,6 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "brorand",
+              "bs58",
+              "crypto-js/sha256",
+              "elliptic",
+              "node-blockchain/src/blockchain",
+              "node-blockchain/src/keygenerator"
+            ],
             "outputPath": "dist/angular-blockchain",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -123,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-blockchain"
 }
